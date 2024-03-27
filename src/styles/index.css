@@ -58,6 +58,7 @@ body {
 .color-option {
     color: var(--light-color);
     font-size: 2rem;
+    cursor: pointer;
 }
 
 .selected {
