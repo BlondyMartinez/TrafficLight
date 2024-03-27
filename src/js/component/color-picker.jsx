@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 const ColorPicker = (props) => {
     const [color, setColor] = useState({
 		red: false,
+        orange: false,
 		yellow: false,
 		green: false,
 		blue: false,
@@ -34,6 +35,10 @@ const ColorPicker = (props) => {
                 <span 
                     className={`red color-option ${color.red ? 'selected' : ''}`}
                     onClick={() => handleColorClick('red')}
+                >⬤ </span>
+                <span 
+                    className={`orange color-option ${color.orange ? 'selected' : ''}`}
+                    onClick={() => handleColorClick('orange')}
                 >⬤ </span>
                 <span 
                     className={`yellow color-option ${color.yellow ? 'selected' : ''}`}

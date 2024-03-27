@@ -85,6 +85,11 @@ body {
     --shadow-color: rgb(255, 193, 24);
 }
 
+.orange {
+    --light-color: rgb(255, 166, 0);
+    --shadow-color: rgb(255, 136, 0);
+}
+
 .red {
     --light-color: red;
     --shadow-color: rgb(236, 0, 0);
