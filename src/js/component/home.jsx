@@ -1,12 +1,9 @@
 import React from "react";
 import TrafficLight from "./traffic-light";
 
-const Home = (props) => {
-	let numbers = props.numbers;
+const Home = () => {
 	return (
-		<div className="d-flex">
 			<TrafficLight />
-		</div>
 	);
 };
 
