@@ -33,11 +33,32 @@ body {
     z-index: 1;
 }
 
+.controller {
+    background-color: rgb(166, 149, 175);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.color-section {
+    background-color:  rgb(243, 221, 255);
+    border-radius: 10px;
+}
+
+.color-option {
+    color: var(--light-color);
+    font-size: 2rem;
+}
+
+.selected {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 1px black, -2px -2px 1px black, -2px 2px 1px black, 2px -2px 1px black;
+}
+
 /* COLOR OPTIONS */
 
 .green {
     --light-color: greenyellow;
-    --shadow-color: rgb(159, 227, 57);
+    --shadow-color: rgb(165, 235, 59);
 }
 
 .yellow {
@@ -56,8 +77,8 @@ body {
 }
 
 .purple {
-    --light-color: rgb(185, 0, 185);
-    --shadow-color: rgb(170, 2, 170);
+    --light-color: rgb(157, 0, 255);
+    --shadow-color: rgb(147, 0, 239);
 }
 
 .blue {
