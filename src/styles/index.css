@@ -50,6 +50,11 @@ body {
     --shadow-color: rgb(236, 0, 0);
 }
 
+.pink {
+    --light-color: rgb(255, 108, 208);
+    --shadow-color: rgb(249, 93, 200);
+}
+
 .purple {
     --light-color: rgb(185, 0, 185);
     --shadow-color: rgb(170, 2, 170);
