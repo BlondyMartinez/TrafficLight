@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
 const TrafficLight = ({ selectedColors }) => {
-	console.log(selectedColors);
-
 	const [lights, setLights] = useState({
 		top: true,
 		mid: false,

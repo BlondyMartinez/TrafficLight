@@ -15,6 +15,7 @@ const Home = () => {
             [identifier]: color
         }));
     };
+    
     return (
         <>
             <TrafficLight selectedColors={selectedColors} />
