@@ -58,7 +58,7 @@ body {
 
 .green {
     --light-color: greenyellow;
-    --shadow-color: rgb(165, 235, 59);
+    --shadow-color: rgb(153, 218, 56);
 }
 
 .yellow {
@@ -78,32 +78,10 @@ body {
 
 .purple {
     --light-color: rgb(157, 0, 255);
-    --shadow-color: rgb(147, 0, 239);
+    --shadow-color: rgb(138, 0, 224);
 }
 
 .blue {
     --light-color: rgb(0, 162, 255);
     --shadow-color: rgb(0, 149, 235);
-}
-
-@media only screen and (max-width: 768px) {
-    .light {
-        width: 30vw; 
-    }
-
-    .bar {
-        width: 9vw;
-        height: 9vw;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .light {
-        width: 45vw; 
-    }
-
-    .bar {
-        height: 12vw;
-        width: 12vw;
-    }
 }
