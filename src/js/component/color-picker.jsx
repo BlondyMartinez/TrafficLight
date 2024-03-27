@@ -8,18 +8,31 @@ const ColorPicker = (props) => {
 		green: false,
 		blue: false,
 		purple: false,
-		pink: false
+		pink: false,
+        rainbow: false
 	})
 
 	const handleColorClick = (selectedColor) => {
-        setColor(prevColors => {
-            const updatedColors = {};
-            for (const color in prevColors) {
-                updatedColors[color] = color === selectedColor;
+        if (selectedColor === 'rainbow') {
+            if (!color.rainbow) {
+                const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink'];
+                let index = 0;
+                const intervalId = setInterval(() => {
+                    props.onSelectColor(colors[index], props.identifier);
+                    index = (index + 1) % colors.length;
+                }, 500); 
+                setRainbowIntervalId(intervalId);
             }
-            return updatedColors;
-        });
-        props.onSelectColor(selectedColor, props.identifier);
+        } else {
+            setColor(prevColors => {
+                const updatedColors = {};
+                for (const color in prevColors) {
+                    updatedColors[color] = color === selectedColor;
+                }
+                return updatedColors;
+            });
+            props.onSelectColor(selectedColor, props.identifier);
+        }
     };
 
     useEffect(() => {
@@ -59,7 +72,12 @@ const ColorPicker = (props) => {
                 <span 
                     className={`pink color-option ${color.pink ? 'selected' : ''}`}
                     onClick={() => handleColorClick('pink')}
-                >⬤</span>
+                >⬤ </span>
+                
+                <span 
+                    className={`color-option ${color.rainbow ? 'rainbow' : ''}`}
+                    onClick={() => handleColorClick('rainbow')}
+                    ><i className="fa-solid fa-rainbow"></i></span>
             </div>
         </div>
 	)
