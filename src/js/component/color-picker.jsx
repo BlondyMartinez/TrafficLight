@@ -17,7 +17,7 @@ const ColorPicker = (props) => {
 
 	const handleColorClick = (selectedColor) => {
         if (selectedColor === 'rainbow') rainbowWaveMode();
-        else colorMode();
+        else colorMode(selectedColor);
     };
 
     useEffect(() => {
@@ -38,7 +38,7 @@ const ColorPicker = (props) => {
         setRainbowIntervalId(intervalId);
     }
 
-    function colorMode(){
+    function colorMode(selectedColor){
         setRainbowMode(false);
         setColor(prevColors => {
             const updatedColors = {};
