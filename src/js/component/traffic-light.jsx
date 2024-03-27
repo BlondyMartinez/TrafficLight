@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const TrafficLight = () => {
+const TrafficLight = ({ selectedColors }) => {
+	console.log(selectedColors);
+
 	const [lights, setLights] = useState({
 		top: true,
 		mid: false,
@@ -19,18 +21,18 @@ const TrafficLight = () => {
 	
 
 	return(
-		<div className=" fixed-bottom d-flex flex-column justify-content-center align-items-center">
+		<div className="d-flex flex-column align-items-center justify-content-center">
 			<div className="traffic-light d-flex flex-column gap-4">
 				<div
-					className={`light ${lights.top ? 'turned-on' : ''} red`}
+					className={`light ${lights.top ? 'turned-on' : ''} ${selectedColors.top}`}
 					onClick={() => handleLightClick('top')}
 				></div>
 				<div
-					className={`light ${lights.mid ? 'turned-on' : ''} yellow`}
+					className={`light ${lights.mid ? 'turned-on' : ''} ${selectedColors.mid}`}
 					onClick={() => handleLightClick('mid')}
 				></div>
 				<div
-					className={`light ${lights.bottom ? 'turned-on' : 'turned-off'} green`}
+					className={`light ${lights.bottom ? 'turned-on' : 'turned-off'} ${selectedColors.bottom}`}
 					onClick={() => handleLightClick('bottom')}
 				></div>
 			</div>
