@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(rgb(0, 179, 255), skyblue);
+    background: linear-gradient(to bottom, blue 15%, purple 60%, orange);
     height: 100vh;
     width: 100%;
 }
@@ -36,8 +36,9 @@ body {
 .start-60 {
     left: 60%;
 }
+
 .controller {
-    background-color: rgb(166, 149, 175);
+    background-color: rgb(126, 113, 133);
     padding: 10px;
     border-radius: 20px;
 }
@@ -45,8 +46,8 @@ body {
 .controller-bar {
     width: 1vw;
     height: 3vw;
-    background-color: rgb(166, 149, 175);
-    box-shadow: inset 0 1rem rgb(155, 138, 163);
+    background-color: rgb(126, 113, 133);
+    box-shadow: inset 0 1rem rgb(92, 82, 97);
     z-index: -1;
 }
 
@@ -74,6 +75,25 @@ body {
     width: auto;
     font-size: 2.5rem;
 }
+
+
+.billboard {
+    background-color: beige;
+    border-radius: 20px 20px 0 0;
+    border: 20px solid rgb(37, 25, 37);
+    border-bottom: none;
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+}
+
+.billboard-img {
+    aspect-ratio: 1/1;
+    width: 22vw;
+    box-shadow: 0 0 20px beige;
+    padding: 10px 10px 0 10px;
+}
+
 /* COLOR OPTIONS */
 
 .green {
