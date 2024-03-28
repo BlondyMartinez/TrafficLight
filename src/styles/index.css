@@ -51,8 +51,19 @@ body {
     z-index: -1;
 }
 
+.btn {
+    background-color: rgb(243, 221, 255);
+    font-weight: bolder;
+    color: rgb(47, 32, 60);
+}
+
+.btn-selected,
+.btn:hover {
+    background-color: rgb(196, 166, 212);
+}
+
 .color-section {
-    background-color:  rgb(243, 221, 255);
+    background-color: rgb(243, 221, 255);
     border-radius: 10px;
 }
 
