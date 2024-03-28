@@ -103,6 +103,16 @@ body {
     width: 22vw;
     box-shadow: 0 0 20px beige;
     padding: 10px 10px 0 10px;
+    transition: all 0.1s ease;
+}
+
+.billboard-off {
+    background-color: rgb(39, 39, 34);
+}
+
+.billboard-off-img {
+    opacity: 10%;
+    box-shadow: 0 0 0 beige;
 }
 
 /* COLOR OPTIONS */
