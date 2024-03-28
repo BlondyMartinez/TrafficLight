@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TrafficLight from "./traffic-light";
 import TrafficLightController from "./traffic-light-controller";
+import Billboard from "./billboard";
 
 const Home = () => {
 	const [selectedColors, setSelectedColors] = useState({
@@ -18,6 +19,7 @@ const Home = () => {
     
     return (
         <>
+            <Billboard />
             <TrafficLight selectedColors={selectedColors} />
             <TrafficLightController selectedColors={selectedColors} onSelectColor={onSelectColor} />
         </>
