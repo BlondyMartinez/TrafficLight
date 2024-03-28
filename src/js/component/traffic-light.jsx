@@ -1,36 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 
-const TrafficLight = ({ selectedColors }) => {
-	const [lights, setLights] = useState({
-		top: true,
-		mid: false,
-		bottom: false
-	})
-
+const TrafficLight = (props) => {
 	const handleLightClick = (position) => {
-		const updatedLights = {};
-
-		Object.keys(lights).forEach((key) => {
-		  updatedLights[key] = key === position;
-		});
-
-		setLights(updatedLights);
+		props.onSelectPosition(position);
 	};
-	
 
 	return(
 		<div className="d-flex flex-column align-items-center justify-content-center">
 			<div className="traffic-light d-flex flex-column gap-4">
 				<div
-					className={`light ${lights.top ? 'turned-on' : ''} ${selectedColors.top}`}
+					className={`light ${props.selectedPosition.top ? 'turned-on' : ''} ${props.selectedColors.top}`}
 					onClick={() => handleLightClick('top')}
 				></div>
 				<div
-					className={`light ${lights.mid ? 'turned-on' : ''} ${selectedColors.mid}`}
+					className={`light ${props.selectedPosition.mid ? 'turned-on' : ''} ${props.selectedColors.mid}`}
 					onClick={() => handleLightClick('mid')}
 				></div>
 				<div
-					className={`light ${lights.bottom ? 'turned-on' : 'turned-off'} ${selectedColors.bottom}`}
+					className={`light ${props.selectedPosition.bottom ? 'turned-on' : ''} ${props.selectedColors.bottom}`}
 					onClick={() => handleLightClick('bottom')}
 				></div>
 			</div>
