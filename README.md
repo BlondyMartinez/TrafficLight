@@ -1,42 +1,38 @@
-# Hello World with React boilerplate
+<h1>Traffic Light</h1>
+<h2>Overview</h2>
+Welcome to the Traffic Light Simulation Project! This project serves as a learning exercise for beginners diving into React. It simulates a basic traffic light system with customizable colors and a dynamic billboard feature.
+<h4><a href="https://blondy-traffic-light-git-main-blondys-projects.vercel.app/">Deployment</a></h4>
+<h2>Features</h2>
+<ul>
+  <li><b>Traffic Light Control:</b> Toggle between different traffic light positions (top, middle, bottom) to change their colors.</li>
+  <li><b>Color Customization:</b> Choose from a variety of colors for each traffic light position.</li>
+  <li><b>Dynamic Billboard:</b> Experience a dynamic billboard that blinks randomly, adding an interactive element to the simulation.</li>
+</ul>
+<h2>Technologies Used</h2>
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,js,bootstrap,react" />
+  </a>
+</p>
+<h2>Getting Started</h2>
 
-Start coding a react application
+1. Clone the repository:
 
-> If you are working locally instead of using codespaces or gitpod, please follow [local installation steps](#local-installation-skip-if-you-are-working-on-codespaces-or-gitpod) and come back to this part of the readme.
-
-## How to start coding?
-
-- Install the packages with `$ npm install`.
-- Run the webpack server with `$ npm run start`
-
-You can update the `styles/index.css` or `js/index.js` depending on your needs.
-Add more files into your, `./src/js/components` or styles folder as you need them.
-
-## Local Installation (skip if you are working on codespaces or gitpod)
-
-Download the boilerplate using git
-
+```bash
+git clone https://github.com/BlondyMartinez/TrafficLight.git
 ```
-$ git clone https://github.com/4GeeksAcademy/react-hello.git
-$ cd react-hello
+2. Install dependencies:
+
+```bash
+cd TrafficLight
+npm install
+```
+3. Start the development server:
+```bash
+npm run start
 ```
 
-## Publish your website!
-
-This boilerplate is 100% compatible with the free [github pages](https://pages.github.com/) and [vercel](https://vercel.com/) hosting.
-
-It takes just 2 minutes to deploy, [click here to start the process](https://github.com/4GeeksAcademy/react-hello/blob/master/docs/DEPLOY.md).
-
-## Other features
-
-- Automatic Code Formatting: Use of [Prettier](https://prettier.io/) for automatic code indentation and formatting.
-- Error reporting: Use of [eslint](https://eslint.org/) for better error reporting.
-- Hot Deploy: Use of [Webpack Development Server](https://webpack.js.org/configuration/dev-server/) for hot deploy and live reload.
-- One-command publish of the code to github pages with `npm run deploy:github`.
-- Babel 7 (really fast).
-
-### Contributors
-
-This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
-
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
+<h2>Preview</h2>
+<div style="display: flex; justify-content: center;">
+  <img src="traffic-light.gif" alt="Your GIF alt text">
+</div>
