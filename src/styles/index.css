@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(rgb(0, 183, 255), skyblue);
+    background: linear-gradient(to bottom, blue 15%, purple 60%, orange);
     height: 100vh;
     width: 100%;
 }
@@ -24,7 +24,7 @@ body {
     aspect-ratio: 1/1;
     border-radius: 50%;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0), inset 1rem 1rem rgb(33, 26, 36);
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    transition: background-color 1s ease, box-shadow 1s ease;
 }
 
 .turned-on {
@@ -33,20 +33,44 @@ body {
     z-index: 1;
 }
 
+.start-60 {
+    left: 60%;
+}
+
 .controller {
-    background-color: rgb(166, 149, 175);
+    background-color: rgb(126, 113, 133);
     padding: 10px;
     border-radius: 20px;
 }
 
+.controller-bar {
+    width: 1vw;
+    height: 3vw;
+    background-color: rgb(126, 113, 133);
+    box-shadow: inset 0 1rem rgb(92, 82, 97);
+    z-index: -1;
+}
+
+.btn {
+    background-color: rgb(243, 221, 255);
+    font-weight: bolder;
+    color: rgb(47, 32, 60);
+}
+
+.btn-selected,
+.btn:hover {
+    background-color: rgb(196, 166, 212);
+}
+
 .color-section {
-    background-color:  rgb(243, 221, 255);
+    background-color: rgb(243, 221, 255);
     border-radius: 10px;
 }
 
 .color-option {
     color: var(--light-color);
     font-size: 2rem;
+    cursor: pointer;
 }
 
 .selected {
@@ -54,16 +78,58 @@ body {
     text-shadow: 2px 2px 1px black, -2px -2px 1px black, -2px 2px 1px black, 2px -2px 1px black;
 }
 
+.rainbow {
+    background: linear-gradient(to right, red,  rgb(255, 166, 0), rgb(255, 208, 0), greenyellow, rgb(0, 162, 255), rgb(157, 0, 255), rgb(255, 108, 208));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    width: auto;
+    font-size: 2.5rem;
+}
+
+
+.billboard {
+    background-color: beige;
+    border-radius: 20px 20px 0 0;
+    border: 20px solid rgb(37, 25, 37);
+    border-bottom: none;
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+}
+
+.billboard-img {
+    aspect-ratio: 1/1;
+    width: 22vw;
+    box-shadow: 0 0 20px beige;
+    padding: 10px 10px 0 10px;
+    transition: all 0.1s ease;
+}
+
+.billboard-off {
+    background-color: rgb(39, 39, 34);
+}
+
+.billboard-off-img {
+    opacity: 10%;
+    box-shadow: 0 0 0 beige;
+}
+
 /* COLOR OPTIONS */
 
 .green {
     --light-color: greenyellow;
-    --shadow-color: rgb(165, 235, 59);
+    --shadow-color: rgb(153, 218, 56);
 }
 
 .yellow {
     --light-color: rgb(255, 208, 0);
-    --shadow-color: rgb(255, 198, 40);
+    --shadow-color: rgb(255, 193, 24);
+}
+
+.orange {
+    --light-color: rgb(255, 166, 0);
+    --shadow-color: rgb(255, 136, 0);
 }
 
 .red {
@@ -78,32 +144,10 @@ body {
 
 .purple {
     --light-color: rgb(157, 0, 255);
-    --shadow-color: rgb(147, 0, 239);
+    --shadow-color: rgb(138, 0, 224);
 }
 
 .blue {
     --light-color: rgb(0, 162, 255);
     --shadow-color: rgb(0, 149, 235);
-}
-
-@media only screen and (max-width: 768px) {
-    .light {
-        width: 30vw; 
-    }
-
-    .bar {
-        width: 9vw;
-        height: 9vw;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .light {
-        width: 45vw; 
-    }
-
-    .bar {
-        height: 12vw;
-        width: 12vw;
-    }
 }
